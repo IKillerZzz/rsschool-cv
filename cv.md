@@ -17,7 +17,7 @@ GitHub [IKillerZzz](https://github.com/IKillerZzz).
 ## Experience
 I'm doing tasks on [codewars](https://www.codewars.com/users/IKillerZzz), [htmlacademy](https://htmlacademy.ru/profile/id478751).
 ## Education 
-**PSU**: *Faculty of Information Technologies*.
+**PSU'17**: *Faculty of Information Technologies*.
 
 **Specialty:** *Computer systems and the Internet technologies*.
 ## English
