@@ -13,7 +13,16 @@ Hey! I’m Illia. I’m going to start working as a Junior Front-End Developer. 
 * VSC
 
 ## Code examples
-GitHub [IKillerZzz](https://github.com/IKillerZzz).
+```javascript
+function nthFibo(n) {
+  let [prev, curr] = [0, 1];
+  for (let i = 1; i < n; i++) {
+    [prev, curr] = [curr, prev + curr]
+  }
+  return prev;
+}
+```
+More examples in my GitHub: [IKillerZzz](https://github.com/IKillerZzz?tab=repositories).
 ## Experience
 I'm doing tasks on [codewars](https://www.codewars.com/users/IKillerZzz), [htmlacademy](https://htmlacademy.ru/profile/id478751).
 ## Education 
