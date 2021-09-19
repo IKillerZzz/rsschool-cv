@@ -64,27 +64,27 @@
         <div class="section-element">
           <h2>CODE EXAMPLES</h2>
           <pre>
-            <code class="language-javascript">
-              function convert(input, source, target) {
-                if (source === target) return input; 
-                let dec = 0;
-                const res = [];
-                
-                for (let i = 0; i < input.length;) {
-                  dec += source.indexOf(input[i]) * Math.pow(source.length, input.length - ++i);
-                } 
-                
-                while(true) {
-                  if (dec < target.length) {
-                    res.push(dec);
-                    break;
-                  }
-                  res.push(dec % target.length);
-                  dec = Math.floor(dec / target.length);
-                }
-
-                return res.reverse().map( i => target[i]).join('');
-              }
+            <code class="javascript language-javascript">
+function convert(input, source, target) {
+  if (source === target) return input; 
+  let dec = 0;
+  const res = [];
+  
+  for (let i = 0; i < input.length;) {
+    dec += source.indexOf(input[i]) * Math.pow(source.length, input.length - ++i);
+  } 
+  
+  while(true) {
+    if (dec < target.length) {
+      res.push(dec);
+      break;
+    }
+    res.push(dec % target.length);
+    dec = Math.floor(dec / target.length);
+  }
+  
+  return res.reverse().map( i => target[i]).join('');
+}
             </code>
           </pre>
           <p>You can find more examples on my

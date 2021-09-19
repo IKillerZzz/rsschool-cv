@@ -171,6 +171,14 @@ a:hover {
         background: url(../images/tg.png) no-repeat;
         background-position: 50px 23px;
     }
+
+    .javascript {
+        font-size: 10px;
+    }
+
+    .javascript::-webkit-scrollbar { 
+        width: 0; 
+    }
     
     .github-link,
     .course-link {
