@@ -7,6 +7,9 @@
   <title>HTML, CSS & Git Basics</title>
   <link href="./assets/styles/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
 </head>
 
 <body>
@@ -60,7 +63,31 @@
         </div>
         <div class="section-element">
           <h2>CODE EXAMPLES</h2>
-          <p>You can find all examples on my
+          <pre>
+            <code class="language-javascript">
+              function convert(input, source, target) {
+                if (source === target) return input; 
+                let dec = 0;
+                const res = [];
+                
+                for (let i = 0; i < input.length;) {
+                  dec += source.indexOf(input[i]) * Math.pow(source.length, input.length - ++i);
+                } 
+                
+                while(true) {
+                  if (dec < target.length) {
+                    res.push(dec);
+                    break;
+                  }
+                  res.push(dec % target.length);
+                  dec = Math.floor(dec / target.length);
+                }
+
+                return res.reverse().map( i => target[i]).join('');
+              }
+            </code>
+          </pre>
+          <p>You can find more examples on my
             <a href="https://github.com/IKillerZzz" target="_blank">GitHub account
               <img class="inline-image" src="./assets/images/github.png" alt="github logo">.
             </a>
