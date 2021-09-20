@@ -7,14 +7,41 @@
   <title>HTML, CSS & Git Basics</title>
   <link href="./assets/styles/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
 </head>
 
 <body>
   <div class="wrapper">
+    <nav class="nav-menu">
+      <ul class="menu-list">
+        <li class="menu-item"><a href="#summary" class="menu-link">Summary</a></li>
+        <li class="menu-item"><a href="#skills" class="menu-link">Skills</a></li>
+        <li class="menu-item"><a href="#code" class="menu-link">Code</a></li>
+        <li class="menu-item"><a href="#expirience" class="menu-link">Experience</a></li>
+        <li class="menu-item"><a href="#education" class="menu-link">Education</a></li>
+        <li class="menu-item"><a href="#english" class="menu-link">English</a></li>
+      </ul>
+    </nav>
+    <div class="burger-menu">
+      <div class="burger-button"></div>
+      <div class="burger-nav">
+        <ul class="burger-list">
+          <li class="burger-item"><a href="#summary" class="menu-link">Summary</a></li>
+          <li class="burger-item"><a href="#skills" class="menu-link">Skills</a></li>
+          <li class="burger-item"><a href="#code" class="menu-link">Code</a></li>
+          <li class="burger-item"><a href="#expirience" class="menu-link">Experience</a></li>
+          <li class="burger-item"><a href="#education" class="menu-link">Education</a></li>
+          <li class="burger-item"><a href="#english" class="menu-link">English</a></li>
+        </ul>
+      </div>
+    </div>
     <header class="header">
       <div class="header-element">
         <figure class="figure-photo">
           <img src="./assets/images/avatar.jpg" alt="My photo" width="245">
+          <figcaption class="figure-caption">Avatar</figcaption>
         </figure>
       </div>
       <div class="header-element">
@@ -40,7 +67,7 @@
     <main>
       <section class="section">
         <div class="section-element">
-          <h2>SUMMARY</h2>
+          <h2 id="summary">SUMMARY</h2>
           <p>Hey! I’m Illia. I’m going to start working as a Junior Front-End Developer. Want to be in a
             space, where
             people do huge useful things and make high demands on themselves. I responsibly approach the
@@ -49,7 +76,7 @@
           </p>
         </div>
         <div class="section-element">
-          <h2>SKILLS</h2>
+          <h2 id="skills">SKILLS</h2>
           <ul class="stack-list">
             <li><img class="skill-logo" src="./assets/images/html.png" alt="HTML5 Logo"></li>
             <li><img class="skill-logo" src="./assets/images/css.png" alt="CSS3 Logo"></li>
@@ -59,15 +86,39 @@
           </ul>
         </div>
         <div class="section-element">
-          <h2>CODE EXAMPLES</h2>
-          <p>You can find all examples on my
+          <h2 id="code">CODE EXAMPLES</h2>
+          <pre>
+            <code class="javascript language-javascript">
+function convert(input, source, target) {
+  if (source === target) return input; 
+  let dec = 0;
+  const res = [];
+  
+  for (let i = 0; i &lt; input.length;) {
+    dec += source.indexOf(input[i]) * Math.pow(source.length, input.length - ++i);
+  } 
+  
+  while(true) {
+    if (dec &lt; target.length) {
+      res.push(dec);
+      break;
+    }
+    res.push(dec % target.length);
+    dec = Math.floor(dec / target.length);
+  }
+  
+  return res.reverse().map( i => target[i]).join('');
+}
+            </code>
+          </pre>
+          <p>You can find more examples on my
             <a href="https://github.com/IKillerZzz" target="_blank">GitHub account
               <img class="inline-image" src="./assets/images/github.png" alt="github logo">.
             </a>
           </p>
         </div>
         <div class="section-element">
-          <h2>EXPERIENCE</h2>
+          <h2 id="expirience">EXPERIENCE</h2>
           <p> I started with my university experience from basics of programming and completed
             my diploma project: web application with used Bootstrap, JS, jQuery, MySQL, PHP.
             Now i'm doing tasks on:
@@ -78,15 +129,41 @@
               <img class="inline-image" src="./assets/images/ha.png" alt="htmlacademy logo">.
             </a>
           </p>
+          <div class="my-pojects">
+            <a href="https://rolling-scopes-school.github.io/ikillerzzz-JS2020Q3/shelter/pages/main/"
+              class="project-link project-1" target="_blank">
+              <h3 class="text-background">Shelter</h3>
+              <p class="text-background">Website for shelter "Cozy House"</p>
+              <p class="text-background">Made only with HTML, CSS, JS</p>
+            </a>
+            <a href="https://rolling-scopes-school.github.io/ikillerzzz-JS2020Q3/momentum/"
+              class="project-link project-2" target="_blank">
+              <h3 class="text-background">Momentum</h3>
+              <p class="text-background">Mini web application</p>
+              <p class="text-background">Made only with HTML, CSS, JS</p>
+            </a>
+            <a href="https://rolling-scopes-school.github.io/ikillerzzz-JS2020Q3/webdev/" class="project-link project-3"
+              target="_blank">
+              <h3 class="text-background">Webdev</h3>
+              <p class="text-background">Landing page</p>
+              <p class="text-background">Made only with HTML, CSS, JS</p>
+            </a>
+            <a href="https://rolling-scopes-school.github.io/ikillerzzz-JSFE2021Q1/wildlife/"
+              class="project-link project-4" target="_blank">
+              <h3 class="text-background">Wildlife</h3>
+              <p class="text-background">Landing page</p>
+              <p class="text-background">Made only with HTML, CSS, JS</p>
+            </a>
+          </div>
         </div>
         <div class="section-element">
-          <h2>EDUCATION</h2>
+          <h2 id="education">EDUCATION</h2>
           <p> <b>PSU:</b> Faculty of Information Technologies.<br>
             <b>Specialty:</b> Computer systems and the Internet technologies.
           </p>
         </div>
         <div class="section-element">
-          <h2>ENGLISH</h2>
+          <h2 id="english">ENGLISH</h2>
           <p>A1+, but I keep learning English to this day in the mobile app
             <a href="https://simpler.link/" target="_blank">Simpler
               <img class="inline-image" src="./assets/images/simpler.png" alt="simpler logo">.
@@ -105,6 +182,7 @@
       </a>
     </footer>
   </div>
+  <script src="./src/index.js"></script>
 </body>
 
 </html>
