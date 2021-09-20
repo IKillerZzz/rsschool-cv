@@ -93,12 +93,12 @@ function convert(input, source, target) {
   let dec = 0;
   const res = [];
   
-  for (let i = 0; i < input.length;) {
+  for (let i = 0; i &lt; input.length;) {
     dec += source.indexOf(input[i]) * Math.pow(source.length, input.length - ++i);
   } 
   
   while(true) {
-    if (dec < target.length) {
+    if (dec &lt; target.length) {
       res.push(dec);
       break;
     }
