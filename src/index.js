@@ -9,6 +9,7 @@ BURGER_BUTTON.addEventListener('click', () => {
 
 BURGER_LIST.addEventListener('click', (e) => {
   if (e.target.classList.contains('menu-link')) {
+    BURGER_BUTTON.classList.toggle('burger-rotate');
     BURGER_MENU.classList.toggle('hide-menu');
   }
 });
