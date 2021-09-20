@@ -23,6 +23,12 @@ html {
     margin-top: 15px;
 }
 
+.figure-caption {
+    text-align: center;
+    width: 1px;
+    opacity: 0;
+}
+
 .header-element img {
     margin-left: 30px;
     border-radius: 50%;
