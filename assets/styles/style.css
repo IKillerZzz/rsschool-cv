@@ -247,6 +247,22 @@ h3.text-background {
     background-image: url('../images/ex4.jpg');
 }
 
+.project-5 {
+    background-image: url('../images/port.PNG');
+}
+
+.project-6 {
+    background-image: url('../images/key.PNG');
+}
+
+.project-7 {
+    background-image: url('../images/memory.PNG');
+}
+
+.project-8 {
+    background-image: url('../images/museum.PNG');
+}
+
 .footer {
     display: flex;
     justify-content: space-between;
